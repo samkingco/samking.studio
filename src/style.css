@@ -84,7 +84,7 @@ h3,
 p,
 ul {
   margin: 0;
-  max-width: 30em;
+  max-width: 32rem;
 }
 
 h1 {
@@ -95,15 +95,16 @@ h1 {
 }
 
 h2 {
-  font-size: 1.25em;
+  font-family: "Nikolai", serif;
+  font-size: 1.5em;
   font-weight: normal;
-  color: var(--subdued);
+  font-style: italic;
 }
 
 h3 {
-  font-family: "Nikolai", serif;
-  text-decoration: none;
   font-size: 1em;
+  font-weight: normal;
+  color: var(--subdued)
 }
 
 ul {
@@ -111,14 +112,13 @@ ul {
   padding: 0;
 }
 
+h1 + h3,
 h1 + p,
 h2 + p,
+h3 + p,
+h3 + ul,
 p + p {
   margin-top: 0.5rem;
-}
-
-ul + h3 {
-  margin-top: 1em;
 }
 
 img {
@@ -171,4 +171,26 @@ hr {
   padding: 1rem;
   max-width: 30em;
   margin: 2rem 0;
+}
+
+.intro-lists {
+  display: flex;
+  /* grid-template-columns: 1fr; */
+  /* grid-template-columns: repeat(auto-fit, minmax(10vw, 1fr)); */
+  column-gap: 4rem;
+  row-gap: 2rem;
+  margin: 2rem 0;
+  flex-wrap: wrap;
+}
+
+@media (min-width: 40rem) {
+  .intro-lists {
+    grid-gap: 4rem;
+  }
+}
+
+.projects-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 2rem;
 }

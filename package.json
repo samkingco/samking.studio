@@ -1,7 +1,7 @@
 {
-  "name": "samking.eth",
+  "name": "samking.studio",
   "version": "1.0.0",
-  "description": "Site for info about me",
+  "description": "Site for info about Sam King Studio",
   "scripts": {
     "copystatic": "copyfiles -f src/static/* dist",
     "dev": "parcel serve src/index.html -p 1234",
@@ -22,10 +22,10 @@
   },
   "homepage": "https://github.com/samkingco/samking.eth#readme",
   "devDependencies": {
-    "@parcel/config-default": "^2.0.0-rc.0",
-    "@parcel/transformer-image": "^2.0.0-rc.0",
+    "@parcel/config-default": "^2.5.0",
+    "@parcel/transformer-image": "^2.5.0",
     "copyfiles": "^2.4.1",
     "cross-env": "^7.0.3",
-    "parcel": "^2.0.0-rc.0"
+    "parcel": "^2.5.0"
   }
 }
