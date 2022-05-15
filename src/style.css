@@ -173,20 +173,20 @@ hr {
   margin: 2rem 0;
 }
 
+.contact {
+  margin-top: 0.5rem;
+}
+
+.contact li + li {
+  margin-top: 0.5rem;
+}
+
 .intro-lists {
   display: flex;
-  /* grid-template-columns: 1fr; */
-  /* grid-template-columns: repeat(auto-fit, minmax(10vw, 1fr)); */
   column-gap: 4rem;
   row-gap: 2rem;
   margin: 2rem 0;
   flex-wrap: wrap;
-}
-
-@media (min-width: 40rem) {
-  .intro-lists {
-    grid-gap: 4rem;
-  }
 }
 
 .projects-list {
