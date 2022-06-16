@@ -173,14 +173,6 @@ hr {
   margin: 2rem 0;
 }
 
-.contact {
-  margin-top: 0.5rem;
-}
-
-.contact li + li {
-  margin-top: 0.5rem;
-}
-
 .intro-lists {
   display: flex;
   column-gap: 4rem;
