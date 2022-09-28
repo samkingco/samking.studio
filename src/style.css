@@ -8,21 +8,12 @@
 }
 
 @font-face {
-  font-family: "Text";
+  font-family: "Mono";
   font-display: fallback;
-  src: url("fonts/TextBold.woff") format("woff"),
-    url("fonts/TextBold.woff2") format("woff2");
+  src: url("fonts/Mono.woff") format("woff"),
+    url("fonts/Mono.woff2") format("woff2");
   font-style: normal;
-  font-weight: bold;
-}
-
-@font-face {
-  font-family: "Nikolai";
-  font-display: fallback;
-  src: url("fonts/Nikolai.woff") format("woff"),
-    url("fonts/Nikolai.woff2") format("woff2");
-  font-style: normal;
-  font-weight: bold;
+  font-weight: normal;
 }
 
 @font-face {
@@ -39,13 +30,31 @@
   --background-alpha: 255, 255, 255;
   --foreground: rgb(0, 0, 0);
   --foreground-alpha: 0, 0, 0;
-  --subdued: rgb(88 88 88);
+  --subdued: rgb(88, 88, 88);
+  --extra-subdued: rgb(220, 220, 220);
   --accent: rgb(245, 42, 42);
+  --font-sans: "Text", system, -apple-system, "Helvetica Neue", Helvetica, "Segoe UI", "Roboto", sans-serif;
+  --font-mono: "Mono", SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace;
 }
 
 ::selection {
   background-color: var(--accent);
   color: var(--foreground);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: rgb(0, 0, 0);
+    --background-alpha: 0, 0, 0;
+    --foreground: rgb(255, 255, 255);
+    --foreground-alpha: 255, 255, 255;
+    --subdued: rgb(168, 168, 168);
+    --extra-subdued: rgb(30, 30, 30);
+  }
+
+  ::selection {
+    color: var(--foreground);
+  }
 }
 
 *,
@@ -62,9 +71,8 @@ body {
   margin: 0;
   padding: 0;
   min-height: 100%;
-  padding: 4em 1em;
-  font-family: "Text", system, -apple-system, "Helvetica Neue", Helvetica,
-    "Segoe UI", "Roboto", sans-serif;
+  padding: 2em 1em;
+  font-family: var(--font-sans);
   font-size: 16px;
   line-height: 1.5;
   color: var(--foreground);
@@ -72,9 +80,9 @@ body {
   cursor: crosshair;
 }
 
-@media (min-width: 30em) {
+@media (min-width: 40rem) {
   body {
-    padding: 6em 8vw;
+    padding: 6em 8em;
   }
 }
 
@@ -84,7 +92,6 @@ h3,
 p,
 ul {
   margin: 0;
-  max-width: 32rem;
 }
 
 h1 {
@@ -92,6 +99,7 @@ h1 {
   font-size: 2em;
   font-style: italic;
   line-height: 1;
+  margin-bottom: 1em;
 }
 
 h2 {
@@ -112,7 +120,6 @@ ul {
   padding: 0;
 }
 
-h1 + h3,
 h1 + p,
 h2 + p,
 h3 + p,
@@ -121,56 +128,48 @@ p + p {
   margin-top: 0.5rem;
 }
 
-img {
-  max-width: 100%;
-  height: auto;
-  line-height: 0;
+.m0 {
   margin: 0;
-  padding: 0;
 }
 
 a {
   color: inherit;
+  text-decoration: none;
 }
 
 a:hover {
-  color: var(--accent);
   cursor: crosshair;
+  text-decoration: underline;
 }
 
 hr {
   border: none;
-  background: rgba(var(--foreground-alpha), 0.1);
+  background: var(--extra-subdued);
   width: 100%;
-  max-width: 4em;
+  max-width: 4vw;
   height: 1px;
   margin: 2em 0;
+}
+
+footer {
+  margin-top: 4em;
+}
+
+.wrapper {
+  margin: 0 auto;
+  max-width: 36em;
 }
 
 .subdued {
   color: var(--subdued);
 }
 
+.mono {
+  font-family: var(--font-mono);
+}
+
 .small {
-  font-size: 0.875rem;
-}
-
-.hidden {
-  color: transparent;
-}
-
-.inverted {
-  --background: rgb(0, 0, 0);
-  --background-alpha: 0, 0, 0;
-  --foreground: rgb(255, 255, 255);
-  --foreground-alpha: 255, 255, 255;
-  --subdued: rgb(150 150 150);
-
-  color: var(--foreground);
-  background: var(--background);
-  padding: 1rem;
-  max-width: 30em;
-  margin: 2rem 0;
+  font-size: 0.875em;
 }
 
 .intro-lists {
@@ -181,8 +180,52 @@ hr {
   flex-wrap: wrap;
 }
 
-.projects-list {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-gap: 2rem;
+.projects {
+  padding: 0;
+  overflow-x: hidden;
+  list-style: none;
+  counter-reset: li;
+  border-top: 2px dotted var(--extra-subdued);
+}
+
+.projects li {
+  padding: 0.5em 2em 0.5em 0;
+  position: relative;
+  border-bottom: 2px dotted var(--extra-subdued);
+}
+
+
+.projects li:before {
+  position: absolute;
+  right: 0;
+  counter-increment: li;
+  content: "0" counter(li, decimal-leading-zero);
+  color: var(--subdued);
+  font-family: var(--font-mono);
+}
+
+.projects .title {
+  flex-grow: 1;
+}
+
+.projects .description {
+  color: var(--subdued);
+}
+
+@media (min-width: 40rem) {
+  .projects li {
+    display: flex;
+    padding-left: 2.5em;
+    padding-right: 0;
+  }
+
+  .projects li:before {
+    left: 0;
+    right: auto;
+  }
+  
+  .projects .description {
+    text-align: right;
+    padding-left: 0.5em;
+  }
 }
