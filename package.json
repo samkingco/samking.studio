@@ -1,31 +1,24 @@
 {
   "name": "samking.studio",
-  "version": "1.0.0",
-  "description": "Site for info about Sam King Studio",
+  "version": "0.1.0",
+  "private": true,
   "scripts": {
-    "copystatic": "copyfiles -f src/static/* dist",
-    "dev": "parcel serve src/index.html -p 1234",
-    "build": "cross-env PARCEL_WORKERS=0 parcel build src/index.html && npm run copystatic"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/samkingco/samking.eth.git"
+  "dependencies": {
+    "next": "12.3.1",
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
   },
-  "keywords": [
-    "eth",
-    "ipfs"
-  ],
-  "author": "Sam King",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/samkingco/samking.eth/issues"
-  },
-  "homepage": "https://github.com/samkingco/samking.eth#readme",
   "devDependencies": {
-    "@parcel/config-default": "^2.5.0",
-    "@parcel/transformer-image": "^2.5.0",
-    "copyfiles": "^2.4.1",
-    "cross-env": "^7.0.3",
-    "parcel": "^2.5.0"
+    "@types/node": "18.7.23",
+    "@types/react": "18.0.21",
+    "@types/react-dom": "18.0.6",
+    "eslint": "8.24.0",
+    "eslint-config-next": "12.3.1",
+    "typescript": "4.8.4"
   }
 }
