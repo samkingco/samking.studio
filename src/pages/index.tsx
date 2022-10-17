@@ -58,6 +58,13 @@ export default function Home() {
       <ol className="projects">
         <li>
           <span className="title">
+            <a href="https://drops.samking.studio">Drops</a>
+          </span>
+          <p className="description">Frontend, Smart contracts</p>
+        </li>
+
+        <li>
+          <span className="title">
             <a href="https://ice64.com">ICE64</a>
           </span>
           <p className="description">Photography, Frontend, Smart contracts</p>
