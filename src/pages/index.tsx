@@ -44,10 +44,10 @@ export default function Home() {
           <div>
             <h3>services</h3>
             <ul>
-              <li>Product Design</li>
-              <li>Design systems</li>
-              <li>Frontend</li>
+              <li>Full-stack software</li>
               <li>Smart contracts</li>
+              <li>Product Design</li>
+              <li>web3 Consulting</li>
             </ul>
           </div>
         </section>
