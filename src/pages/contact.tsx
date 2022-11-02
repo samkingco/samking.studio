@@ -39,8 +39,8 @@ export default function Contact() {
         <>
           <p>
             If you’d like to know more about working together, or if you just
-            want a sounding board for an idea, leave your details in the form
-            below and I’ll get back to you ASAP.
+            want someone to be a sounding board for an idea, leave your details
+            in the form below and I’ll get back to you ASAP.
           </p>
 
           <hr />
