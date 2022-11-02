@@ -3,8 +3,9 @@ import Head from "next/head";
 import { useRouter } from "next/router";
 import Script from "next/script";
 import "../styles/globals.css";
+import { trpc } from "../utils/trpc";
 
-function MyApp({ Component, pageProps }: AppProps) {
+function App({ Component, pageProps }: AppProps) {
   const router = useRouter();
 
   const title = "Sam King Studio—";
@@ -46,4 +47,4 @@ function MyApp({ Component, pageProps }: AppProps) {
   );
 }
 
-export default MyApp;
+export default trpc.withTRPC(App);

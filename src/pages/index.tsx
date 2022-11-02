@@ -1,17 +1,8 @@
+import { Layout } from "../components/Layout";
+
 export default function Home() {
   return (
-    <main className="wrapper">
-      <h1>
-        Sam King
-        <br />
-        Studio—
-      </h1>
-      <h3>solo software engineering and design studio with a focus on web3</h3>
-      <p className="m0">
-        <a href="mailto:sam@samking.studio">sam@samking.studio</a>
-      </p>
-      <hr />
-
+    <Layout>
       <div className="blurb">
         <p>
           I’m looking to work with people, not for them. I want to help bring
@@ -114,12 +105,6 @@ export default function Home() {
           <p className="description">Product Design</p>
         </li>
       </ol>
-
-      <footer>
-        <p className="subdued small">
-          Sam King Studio Ltd. <br />7 Bell Yard, London, WC2A 2JR
-        </p>
-      </footer>
-    </main>
+    </Layout>
   );
 }
