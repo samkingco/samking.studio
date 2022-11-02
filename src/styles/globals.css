@@ -360,8 +360,10 @@ input[type="radio"] + label {
   margin: 0;
   padding: 0.5em 1em;
   background: rgba(var(--foreground-alpha), 0.04);
-  border: 1px solid rgba(var(--foreground-alpha), 0.1);
+  box-shadow: inset 0 0 0 1px rgba(var(--foreground-alpha), 0.1);
   border-radius: 0.5em;
+  transition: color 150ms ease, background-color 150ms ease,
+    box-shadow 150ms ease;
 }
 
 input[type="radio"]:checked + label {
@@ -369,10 +371,14 @@ input[type="radio"]:checked + label {
 }
 
 input[type="radio"]:hover + label,
+input[type="radio"]:focus + label,
 input[type="radio"]:focus-visible + label {
   cursor: pointer;
   background: rgba(var(--foreground-alpha), 0);
-  border-color: rgba(var(--foreground-alpha), 0.4);
+}
+
+input[type="radio"]:focus + label {
+  box-shadow: inset 0 0 0 1px rgba(var(--foreground-alpha), 0.4);
 }
 
 input[type="radio"] + label:before {
@@ -383,6 +389,7 @@ input[type="radio"] + label:before {
   height: 0.6em;
   border-radius: 1em;
   margin: 0.45em 0;
+  transition: border-color 150ms ease, background-color 150ms ease
 }
 
 input[type="radio"]:hover + label:before,
