@@ -13,7 +13,7 @@ export default function Home() {
 
         <section className="intro-lists">
           <div>
-            <h3>values</h3>
+            <h3 className="mono small">values</h3>
             <ul>
               <li>Honesty</li>
               <li>Authenticity</li>
@@ -23,7 +23,7 @@ export default function Home() {
           </div>
 
           <div>
-            <h3>interests</h3>
+            <h3 className="mono small">interests</h3>
             <ul>
               <li>Art &amp; Photography</li>
               <li>Public goods</li>
@@ -33,7 +33,7 @@ export default function Home() {
           </div>
 
           <div>
-            <h3>services</h3>
+            <h3 className="mono small">services</h3>
             <ul>
               <li>Full-stack software</li>
               <li>Smart contracts</li>
@@ -44,7 +44,7 @@ export default function Home() {
         </section>
       </div>
 
-      <h3>recently</h3>
+      <h3 className="mono small">recently</h3>
 
       <ol className="projects">
         <li>
