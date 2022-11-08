@@ -29,7 +29,11 @@ export function Layout({ children }: Props) {
 
       <footer>
         <p className="subdued small">
-          Sam King Studio Ltd. <br />7 Bell Yard, London, WC2A 2JR
+          Sam King Studio Ltd.
+          <br />
+          Registered in England &amp; Wales. Company No. 13775597.
+          <br />
+          Registered Office Only: 7 Bell Yard, London, WC2A 2JR
         </p>
       </footer>
     </main>
