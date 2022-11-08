@@ -22,6 +22,10 @@ function App({ Component, pageProps }: AppProps) {
         <title>{title}</title>
         <meta name="description" content={description} />
         <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" href="/favicon-64.png" />
+        <link rel="icon" sizes="192x192" href="/icon-192.png" />
+        <link rel="apple-touch-icon" href="/icon-152.png" />
+        <meta name="msapplication-square310x310logo" content="/icon-310.png" />
 
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
