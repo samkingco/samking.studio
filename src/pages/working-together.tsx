@@ -84,7 +84,7 @@ export default function WorkingTogether() {
         standard 9-5 work week.
       </p>
       <p>
-        I also have a some ADHD tendencies as do most autistic people. This
+        I also have some ADHD tendencies as do most autistic people. This
         means if I find something really interesting, I can get sucked in. This
         sometimes results in working on a personal project for 12 hours without
         even realising I’ve spent that long sat at the computer. I often need my
