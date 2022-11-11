@@ -29,6 +29,7 @@ export default function Contact() {
             days. Thank you for taking the time to fill out the form, I really
             appreciate it. I look forward to chatting!
           </p>
+
           <p>
             In the meantime, why not see what I’ve been tweeting{" "}
             <a href="/twitter">@samkingco</a>, or hop in my{" "}
@@ -38,9 +39,9 @@ export default function Contact() {
       ) : (
         <>
           <p>
-            If you’d like to know more about working together, or if you just
-            want someone to be a sounding board for an idea, leave your details
-            in the form below and I’ll get back to you ASAP.
+            If you’ve got a project idea and want to work together, or if you
+            just want someone to be a sounding board, leave your details in the
+            form below and I’ll get back to you ASAP.
           </p>
 
           <hr />

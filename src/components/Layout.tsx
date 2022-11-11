@@ -7,21 +7,33 @@ interface Props {
 export function Layout({ children }: Props) {
   return (
     <main className="wrapper">
-      <h1>
-        <Link href="/">
-          <a>
-            Sam King
-            <br />
-            Studio—
-          </a>
-        </Link>
-      </h1>
-      <h3 className="mono small">solo software studio with a focus on web3</h3>
-      <p className="m0">
-        <Link href="/contact">
-          <a className="mono small">get in touch</a>
-        </Link>
-      </p>
+      <header>
+        <h1>
+          <Link href="/">
+            <a>
+              Sam King
+              <br />
+              Studio—
+            </a>
+          </Link>
+        </h1>
+
+        <h3 className="mono small">
+          solo software studio with a focus on web3
+        </h3>
+
+        <nav className="top-nav mono small">
+          <Link href="/working-together">
+            <a>working together</a>
+          </Link>
+
+          <span className="subdued separator">|</span>
+
+          <Link href="/contact">
+            <a>get in touch</a>
+          </Link>
+        </nav>
+      </header>
 
       <hr />
 

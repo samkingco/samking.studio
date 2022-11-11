@@ -14,7 +14,7 @@ function App({ Component, pageProps }: AppProps) {
 
   const baseUrl = "https://samking.studio";
   const url = `${baseUrl}${router.asPath}`;
-  const ogImage = `${baseUrl}/og-image.jpg`;
+  const ogImage = `${baseUrl}/og-image.png`;
 
   return (
     <>
