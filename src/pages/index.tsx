@@ -69,7 +69,7 @@ export default function Home() {
 
         <li>
           <span className="title">
-            <a href="https://drops.samking.studio">Prints</a>
+            <a href="https://prints.samking.studio">Prints</a>
           </span>
           <p className="description">Fullstack</p>
         </li>
