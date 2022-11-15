@@ -1,9 +1,19 @@
+import Image from "next/image";
 import Link from "next/link";
 import { Layout } from "../components/Layout";
 
 export default function WorkingTogether() {
   return (
     <Layout>
+      <div className="pfp">
+        <Image
+          src="/avatar.jpg"
+          width="200"
+          height="200"
+          alt="Avatar photo is a self portrait of Sam King. Taken with an old Hasselblad film camera shooting into a mirror."
+        />
+      </div>
+
       <p>
         So you want to join forces and make something together? I’ve put
         together a little guide on getting the most out of our working
@@ -16,13 +26,11 @@ export default function WorkingTogether() {
         <h3 className="mono small">TLDR;</h3>
         <ul>
           <li>
-            <p>
-              I have a preference for written &amp; asynchronous communication.
-            </p>
+            <p>I have a preference for written, asynchronous communication.</p>
           </li>
           <li>
             <p>
-              Straightforward communication styles are good. We can still be
+              Straightforward communication styles are best. We can still be
               friendly, I’m just autistic and take things very literally!
             </p>
           </li>
@@ -88,7 +96,7 @@ export default function WorkingTogether() {
         means if I find something really interesting, I can get sucked in. This
         sometimes results in working on a personal project for 12 hours without
         even realising I’ve spent that long sat at the computer. I often need my
-        partner to nudge me out of it and force me to have dinner at 10pm!
+        partner to nudge me out of it and force me to have dinner.
       </p>
 
       <h3 className="mono small">communication</h3>
@@ -119,14 +127,13 @@ export default function WorkingTogether() {
           <p>
             I do all my progress updates and emails later in the evening. If you
             get a message from me late at night, please don’t reply unless
-            you’re also online and working. It can usually wait!
+            you’re also online and happy to do so.
           </p>
         </li>
         <li>
           <p>
             I typically spend 2-4 days a week on client projects. I love to have
-            my own art practice so I dedicate the rest of the week to that. It
-            also helps me prevent burning out.
+            my own art practice so I dedicate the rest of the week to that.
           </p>
         </li>
         <li>

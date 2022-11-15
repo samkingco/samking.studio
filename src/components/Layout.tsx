@@ -1,10 +1,13 @@
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 interface Props {
   children: React.ReactNode;
 }
 
 export function Layout({ children }: Props) {
+  const router = useRouter();
+
   return (
     <main className="wrapper">
       <header>
@@ -23,15 +26,41 @@ export function Layout({ children }: Props) {
         </h3>
 
         <nav className="top-nav mono small">
-          <Link href="/working-together">
-            <a>working together</a>
-          </Link>
+          <ul>
+            <li>
+              <Link href="/">
+                <a className={router.pathname === "/" ? "active" : ""}>
+                  studio index
+                </a>
+              </Link>
+            </li>
 
-          <span className="subdued separator">|</span>
+            <li>
+              <Link href="/working-together">
+                <a
+                  className={
+                    router.pathname.startsWith("/working-together")
+                      ? "active"
+                      : ""
+                  }
+                >
+                  working together
+                </a>
+              </Link>
+            </li>
 
-          <Link href="/contact">
-            <a>get in touch</a>
-          </Link>
+            <li>
+              <Link href="/contact">
+                <a
+                  className={
+                    router.pathname.startsWith("/contact") ? "active" : ""
+                  }
+                >
+                  contact
+                </a>
+              </Link>
+            </li>
+          </ul>
         </nav>
       </header>
 

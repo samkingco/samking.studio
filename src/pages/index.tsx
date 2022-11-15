@@ -33,32 +33,22 @@ export default function Home() {
           </div>
 
           <div>
-            <h3 className="mono small">services</h3>
+            <h3 className="mono small">doing</h3>
             <ul className="text-list">
-              <li>Full-stack software</li>
+              <li>Fullstack software</li>
               <li>Smart contracts</li>
-              <li>Product Design</li>
-              <li>web3 Consulting</li>
+              <li>Product design</li>
+              <li>web3 consulting</li>
             </ul>
           </div>
         </section>
       </div>
 
-      <h3 className="mono small">recently</h3>
-
+      <h3 className="mono small">personal</h3>
       <ol className="projects">
         <li>
           <span className="title">
-            <a href="https://thegarden.fount.gallery">
-              Fount Gallery: The Garden
-            </a>
-          </span>
-          <p className="description">Frontend, Smart contracts</p>
-        </li>
-
-        <li>
-          <span className="title">
-            <a href="https://drops.samking.studio">Drops</a>
+            <a href="https://roots.samking.studio">Roots</a>
           </span>
           <p className="description">Photography, Frontend, Smart contracts</p>
         </li>
@@ -72,9 +62,28 @@ export default function Home() {
 
         <li>
           <span className="title">
-            <a href="https://roots.samking.studio">Roots</a>
+            <a href="https://drops.samking.studio">Drops</a>
           </span>
           <p className="description">Photography, Frontend, Smart contracts</p>
+        </li>
+
+        <li>
+          <span className="title">
+            <a href="https://drops.samking.studio">Prints</a>
+          </span>
+          <p className="description">Fullstack</p>
+        </li>
+      </ol>
+
+      <h3 className="mono small">with others</h3>
+      <ol className="projects">
+        <li>
+          <span className="title">
+            <a href="https://thegarden.fount.gallery">
+              Fount Gallery: The Garden
+            </a>
+          </span>
+          <p className="description">Frontend, Smart contracts</p>
         </li>
 
         <li>
