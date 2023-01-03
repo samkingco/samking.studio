@@ -48,14 +48,14 @@ export default function Home() {
       <ol className="projects">
         <li>
           <span className="title">
-            <a href="https://roots.samking.studio">Roots</a>
+            <a href="https://roots.samking.photo">Roots</a>
           </span>
-          <p className="description">Photography, Frontend, Smart contracts</p>
+          <p className="description">Photography, Fullstack, Smart contracts</p>
         </li>
 
         <li>
           <span className="title">
-            <a href="https://ice64.samking.studio">ICE64</a>
+            <a href="https://ice64.com">ICE64</a>
           </span>
           <p className="description">Photography, Frontend, Smart contracts</p>
         </li>
@@ -65,13 +65,6 @@ export default function Home() {
             <a href="https://drops.samking.studio">Drops</a>
           </span>
           <p className="description">Photography, Frontend, Smart contracts</p>
-        </li>
-
-        <li>
-          <span className="title">
-            <a href="https://prints.samking.studio">Prints</a>
-          </span>
-          <p className="description">Fullstack</p>
         </li>
       </ol>
 
