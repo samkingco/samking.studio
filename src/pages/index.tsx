@@ -48,6 +48,13 @@ export default function Home() {
       <ol className="projects">
         <li>
           <span className="title">
+            <a href="https://refrakt.app">Refrakt</a>
+          </span>
+          <p className="description">Fullstack</p>
+        </li>
+
+        <li>
+          <span className="title">
             <a href="https://roots.samking.photo">Roots</a>
           </span>
           <p className="description">Photography, Fullstack, Smart contracts</p>
@@ -71,20 +78,7 @@ export default function Home() {
       <h3 className="mono small">with others</h3>
       <ol className="projects">
         <li>
-          <span className="title">
-            <a href="https://drivers.fount.gallery">
-              Fount Gallery: Drivers by Everfresh
-            </a>
-          </span>
-          <p className="description">Frontend, Smart contracts</p>
-        </li>
-
-        <li>
-          <span className="title">
-            <a href="https://thegarden.fount.gallery">
-              Fount Gallery: The Garden
-            </a>
-          </span>
+          <span className="title">Fount Gallery: Various projects</span>
           <p className="description">Frontend, Smart contracts</p>
         </li>
 

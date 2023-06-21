@@ -22,16 +22,16 @@ export function Layout({ children }: Props) {
         </h1>
 
         <h3 className="mono small">
-          solo software studio with a focus on web3
+          Solo software engineering and design studio
         </h3>
+
+        <h3 className="mono small">Not available for new projects right now</h3>
 
         <nav className="top-nav mono small">
           <ul>
             <li>
               <Link href="/">
-                <a className={router.pathname === "/" ? "active" : ""}>
-                  studio index
-                </a>
+                <a className={router.pathname === "/" ? "active" : ""}>/home</a>
               </Link>
             </li>
 
@@ -44,7 +44,7 @@ export function Layout({ children }: Props) {
                       : ""
                   }
                 >
-                  working together
+                  /working-together
                 </a>
               </Link>
             </li>
@@ -56,7 +56,7 @@ export function Layout({ children }: Props) {
                     router.pathname.startsWith("/contact") ? "active" : ""
                   }
                 >
-                  contact
+                  /contact
                 </a>
               </Link>
             </li>
