@@ -1,0 +1,86 @@
+@import "tailwindcss";
+
+@theme {
+	--color-background: hsl(230 4% 100%);
+	--color-foreground: hsl(230 4% 16%);
+	--color-muted: hsl(230 4% 82%);
+	--color-muted-foreground: hsl(230 4% 60%);
+	--color-border: hsl(230 4% 90%);
+
+	--font-mono:
+		"CommitMono", ui-monospace, SFMono-Regular, "SF Mono", Consolas,
+		"Liberation Mono", Menlo, monospace;
+
+	--text-base: 0.75rem;
+}
+
+@layer base {
+	@font-face {
+		font-family: "CommitMono";
+		src: url("/fonts/CommitMono-VariableFont.woff2") format("woff2");
+		font-weight: 100 900;
+		font-style: normal;
+		font-display: block;
+	}
+
+	@media (prefers-color-scheme: dark) {
+		:root {
+			--color-background: hsl(230 4% 4%);
+			--color-foreground: hsl(230 4% 92%);
+			--color-muted: hsl(230 4% 12%);
+			--color-muted-foreground: hsl(230 4% 64%);
+			--color-border: hsl(230 4% 16%);
+		}
+	}
+
+	body {
+		@apply bg-background text-foreground text-base leading-5 font-mono;
+		font-variation-settings: "wght" 400;
+		font-feature-settings: "ss03", "ss04", "ss05";
+	}
+
+	em,
+	i {
+		font-style: normal;
+		font-variation-settings:
+			"wght" 400,
+			"ital" 1;
+	}
+
+	strong,
+	b {
+		font-weight: normal;
+		font-variation-settings: "wght" 700;
+	}
+
+	.font-bold {
+		font-weight: normal !important;
+		font-variation-settings: "wght" 700 !important;
+	}
+
+	@media (prefers-color-scheme: dark) {
+		body {
+			-webkit-font-smoothing: antialiased;
+		}
+	}
+
+	p,
+	li,
+	blockquote {
+		text-wrap: pretty;
+	}
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		text-wrap: balance;
+	}
+
+	::selection {
+		background: var(--color-foreground);
+		color: var(--color-background);
+	}
+}

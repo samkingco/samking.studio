@@ -1,0 +1,46 @@
+---
+import Link from "../components/Link.astro";
+import { siteConfig } from "../config";
+import Layout from "../layouts/Default.astro";
+---
+
+<Layout title={siteConfig.title}>
+	<section class="space-y-10">
+		<article>
+			<h3 class="text-muted-foreground">Projects</h3>
+			<ul class="space-y-2">
+				{
+					siteConfig.projects.map((project) => (
+						<li>
+							<p>
+								{project.href ? (
+									<Link href={project.href}>{project.name}</Link>
+								) : (
+									<span class="text-foreground">{project.name}</span>
+								)}
+								{project.note && (
+									<span class="text-muted-foreground"> ({project.note})</span>
+								)}
+							</p>
+							<p class="text-muted-foreground">{project.description}</p>
+						</li>
+					))
+				}
+			</ul>
+		</article>
+
+		<article>
+			<h3 class="text-muted-foreground">Contact</h3>
+			<p>
+				<Link href={`mailto:${siteConfig.email}`} rel="me">
+					{siteConfig.email}
+				</Link>
+			</p>
+			<p>
+				<Link href={siteConfig.personalSite.href}>
+					{siteConfig.personalSite.name}
+				</Link>
+			</p>
+		</article>
+	</section>
+</Layout>

@@ -1,0 +1,29 @@
+---
+import RootLayout from "./Root.astro";
+
+interface Props {
+	title: string;
+	description?: string;
+}
+const props = Astro.props;
+---
+
+<RootLayout {...props}>
+	<main class="max-w-[72ch] mx-5 md:mx-10 pt-10 pb-40 space-y-10">
+		<header>
+			<h1 class="font-bold text-foreground">
+				<a href="/">Sam King Studio</a>
+			</h1>
+			<p class="text-muted-foreground">A solo studio for personal software.</p>
+		</header>
+
+		<slot />
+
+		<footer class="text-muted-foreground">
+			<p>Sam King Studio Ltd.</p>
+			<p>Registered in England &amp; Wales.</p>
+			<p>Company No. 13775597.</p>
+			<p>5 Brayford Square, London, England, E1 0SG</p>
+		</footer>
+	</main>
+</RootLayout>
